@@ -12,7 +12,7 @@ npm install --save microserv
 ```javascript
 const { Server, Service } = require('microserv')
 
-const server = new Server('my-app', 3000)
+const server = new Server('my-app', { port: 3000 })
 const msgService = new Service('message')
 
 msgService.register('getMessage', () => {
@@ -29,7 +29,7 @@ server.announce()
 const http = require('http')
 const { Server } = require('microserv')
 
-const server = new Server('my-app', 3001)
+const server = new Server('my-app', { port: 3001 })
 
 // Wait for the message service to be ready
 server.need('message')
@@ -39,9 +39,10 @@ server.need('message')
 			res.setHeader('Content-Type', 'text/plain')
 
 			// Call the message service `getMessage` method
-			message.getMessage()
+			message.methods.getMessage()
 				.then(msg => {
 					res.end(msg)
+					// { type: 'string', data: 'Hello, world!' }
 				})
 		})
 
