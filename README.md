@@ -21,6 +21,7 @@ msgService.register('getMessage', () => {
 
 server.addService(msgService)
 server.listen()
+server.announce()
 ```
 
 ### Client B
@@ -48,6 +49,7 @@ server.need('message')
 	})
 
 server.listen()
+server.announce()
 ```
 
 ## License
