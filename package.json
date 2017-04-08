@@ -1,0 +1,22 @@
+{
+  "name": "microserv",
+  "version": "0.1.0",
+  "description": "JSON-RPC over websocket with multicast service discovery.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Street",
+  "license": "MIT",
+  "keywords": [
+    "microservice",
+    "json-rpc",
+    "websocket",
+    "service discovery",
+    "multicast"
+  ],
+  "dependencies": {
+    "dns-discovery": "^5.6.0",
+    "rpc-websockets": "^3.2.1"
+  }
+}
