@@ -4,7 +4,7 @@
   "description": "JSON-RPC over websocket with multicast service discovery.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": "dstreet/microserv",
   "author": "David Street",
@@ -19,5 +19,8 @@
   "dependencies": {
     "dns-discovery": "^5.6.0",
     "rpc-websockets": "^3.2.1"
+  },
+  "devDependencies": {
+    "jest": "^19.0.2"
   }
 }

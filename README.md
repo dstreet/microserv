@@ -53,6 +53,12 @@ server.listen()
 server.announce()
 ```
 
+## Tests
+
+```
+npm run test
+```
+
 ## License
 
 [MIT License](LICENSE)
