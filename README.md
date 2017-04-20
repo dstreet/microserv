@@ -1,4 +1,8 @@
 # Microserv
+![Travis CI](https://travis-ci.org/dstreet/microserv.svg?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/dstreet/microserv/badge.svg)](https://snyk.io/test/github/dstreet/microserv)
+[![npm](https://img.shields.io/npm/v/microserv.svg)]()
+
 JSON-RPC over websocket with multicast service discovery.
 
 ## Installation
