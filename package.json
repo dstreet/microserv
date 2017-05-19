@@ -3,6 +3,7 @@
   "version": "0.5.0",
   "description": "JSON-RPC over websocket with multicast service discovery.",
   "main": "index.js",
+  "browser": "index.browser.js",
   "scripts": {
     "test": "jest"
   },

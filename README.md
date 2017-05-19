@@ -1,5 +1,5 @@
 # Microserv
-JSON-RPC over websocket with multicast service discovery.
+JSON-RPC over websocket with multicast service discover with a browser compatible client
 
 ## Installation
 ```
@@ -8,7 +8,7 @@ npm install --save microserv
 
 ## Usage
 
-### Client A
+### Service A
 ```javascript
 const { Server, Service } = require('microserv')
 
@@ -24,12 +24,19 @@ server.listen()
 server.announce()
 ```
 
-### Client B
+### Service B
 ```javascript
 const http = require('http')
-const { Server } = require('microserv')
+const { Server, Service } = require('microserv')
 
 const server = new Server('my-app', { port: 3001 })
+const mathService = new Service('math')
+
+mathService.register('add', (a, b) => {
+	return a + b
+})
+
+server.addService(mathService)
 
 // Wait for the message service to be ready
 server.need('message')
@@ -39,7 +46,7 @@ server.need('message')
 			res.setHeader('Content-Type', 'text/plain')
 
 			// Call the message service `getMessage` method
-			message.methods.getMessage()
+			message.getMessage()
 				.then(msg => {
 					res.end(msg)
 					// { type: 'string', data: 'Hello, world!' }
@@ -51,6 +58,27 @@ server.need('message')
 
 server.listen()
 server.announce()
+```
+
+### Client
+```javascript
+const { Client } = require('microserv')
+
+const client = new Client()
+
+client.need('message', 'math')
+	.then(([ message, math ]) => {
+		message
+			.getMessage()
+			.then(msg => console.log(msg))
+
+		math
+			.add(1, 2)
+			.then(sum => console.log(sum))
+	})
+
+client.connect('ws://localhost:3000')
+client.connect('ws://localhost:3001')
 ```
 
 ## Tests
