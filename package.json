@@ -20,7 +20,7 @@
   "dependencies": {
     "debug": "^2.6.8",
     "dns-discovery": "^5.6.0",
-    "rpc-websockets": "^3.2.1"
+    "rpc-websockets": "^3.4.0"
   },
   "devDependencies": {
     "jest": "^19.0.2"
