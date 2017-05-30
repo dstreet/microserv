@@ -172,7 +172,7 @@ Parameters:
 * `name` {String}: The name of the event
 * `cb` {Function}: The event callback
 
-### clientService.[service_method](*) -> Object
+### clientService.service_method(*) -> Object
 
 Each method registered with the service is exposed a method of the client service. Returns and object with `data` and `type` properties.
 
