@@ -1,6 +1,6 @@
 {
   "name": "microserv",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "JSON-RPC over websocket with multicast service discovery.",
   "main": "index.js",
   "browser": "index.browser.js",
