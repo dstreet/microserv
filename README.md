@@ -103,6 +103,7 @@ Parameters:
 	* `sever` {http.Server|https.server}: A server to use as the websocket server. If set, will override `port`.
 	* `secure` {Boolean}: Use secure websockets. Defaults to `false`.
 	* `serviceTransform` {Function}: A function to transform the data returned from an rpc call. Defaults to noop.
+	* `dns` {Object}: [dns-discovery](https://github.com/mafintosh/dns-discovery) options
 
 ### server.addService(service) -> Server
 
