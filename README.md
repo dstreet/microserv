@@ -200,6 +200,7 @@ Instantiate a new Client
 Parameters:
 * `opts` {Object}: Options
 	* `serviceTransform` {Function}: A function to transform the data returned from an rpc call. Defaults to noop.
+	* `authorization` {Any}: Credentials to pass to Server when connecting
 
 ### client.connect(connection) -> Websocket
 
