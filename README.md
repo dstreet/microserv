@@ -105,6 +105,7 @@ Parameters:
 	* `serviceTransform` {Function}: A function to transform the data returned from an rpc call. Defaults to noop.
 	* `authorization` {Any}: Credentials to pass to Server when connecting
 	* `authorizeClient` {Function}: A sync or async function to authorize a Client. Function is passed the Client's `authorization` credentials
+	* `dns` {Object}: [dns-discovery](https://github.com/mafintosh/dns-discovery) options
 
 ### server.addService(service) -> Server
 
