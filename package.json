@@ -3,9 +3,11 @@
   "version": "0.9.0",
   "description": "JSON-RPC over websocket with multicast service discovery.",
   "main": "index.js",
-  "browser": "index.browser.js",
+  "browser": "dist/index.browser.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack",
+    "prepublish": "npm run build"
   },
   "repository": "dstreet/microserv",
   "author": "David Street",
@@ -23,6 +25,10 @@
     "rpc-websockets": "^3.4.0"
   },
   "devDependencies": {
-    "jest": "^20.0.4"
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "jest": "^20.0.4",
+    "webpack": "^3.5.5"
   }
 }
