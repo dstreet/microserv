@@ -194,7 +194,7 @@ Emitted when the connection to a lost service is reestablished
 const client = new Client()
 ```
 
-### new Client([opts]) -> Client
+### new Client([opts, rpcOpts]) -> Client
 
 Instantiate a new Client
 
@@ -202,6 +202,7 @@ Parameters:
 * `opts` {Object}: Options
 	* `serviceTransform` {Function}: A function to transform the data returned from an rpc call. Defaults to noop.
 	* `authorization` {Any}: Credentials to pass to Server when connecting
+* `rpcOpts` {Object}: Options for [rpc-websockets](https://github.com/qaap/rpc-websockets)
 
 ### client.connect(connection) -> Websocket
 
@@ -222,6 +223,10 @@ Parameters:
 Emitted when the connection to a service is closed
 
 ### Event: 'error'
+
+### Event: 'unauthorized'
+
+Emitted when the client fails authorization
 
 
 ## Tests
