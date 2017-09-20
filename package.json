@@ -22,7 +22,7 @@
   "dependencies": {
     "debug": "^2.6.8",
     "dns-discovery": "^5.6.0",
-    "rpc-websockets": "^3.4.0"
+    "rpc-websockets": "^3.4.7"
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",
