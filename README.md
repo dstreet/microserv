@@ -131,6 +131,11 @@ Announce the service on the network. Will reannounce the service at the interval
 
 ### Event: 'error'
 
+Emitted when there is an error on the server
+
+### Event: 'connection_reset'
+
+Emitted when a connected socket is reset
 
 ## Service
 
